@@ -40,7 +40,7 @@ const Navbar = () => {
 
   const handleLogout = () => {
     setUserMenuOpen(false);
-    navigate = "/";
+    navigate("/");
   };
 
   return (
