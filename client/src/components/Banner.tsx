@@ -1,4 +1,4 @@
-import { TruckIcon, XIcon } from "lucide-react";
+import { TruckIcon, XIcon, ZapIcon } from "lucide-react";
 import { useState } from "react";
 
 const Banner = () => {
@@ -21,6 +21,11 @@ const Banner = () => {
               <span className="font-medium">
                 Entrega grátis em pedidos acima de R$ 60,00
               </span>
+            </div>
+            <span className="hidden sm:inline text-white/40"></span>
+            <div className="hidden sm:flex items-center gap-2">
+              <ZapIcon className="size-3.5 fill-yellow-400 text-yellow-400 shrink-0" />
+              <span>Lanches deliciosos entregues diariamente.</span>
             </div>
           </div>
           <button
