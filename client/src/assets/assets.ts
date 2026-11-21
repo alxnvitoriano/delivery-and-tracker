@@ -34,17 +34,25 @@ export const categoriesData = [
   },
   { slug: "personal-care", name: "Cuidados pessoais", image: personal_care },
   {
-    slug: "pantry-staples",
+    slug: "produtos-despensa",
     name: "Produtos de despensa",
     image: pantry_staples,
   },
-  { slug: "bakery", name: "Confeitaria", image: bakery },
-  { slug: "beverages", name: "Bebidas", image: drinks },
-  { slug: "meat-seafood", name: "Carne & frutos do mar", image: meat_seafood },
-  { slug: "snacks", name: "Lanches", image: snacks },
-  { slug: "frozen-foods", name: "Comidas congeladas", image: frozen_foods },
-  { slug: "baby-care", name: "Cuidados de bebê", image: baby_care },
-  { slug: "dairy-eggs", name: "Laticínios & Ovos", image: dairy_eggs },
+  { slug: "confeitaria", name: "Confeitaria", image: bakery },
+  { slug: "bebidas", name: "Bebidas", image: drinks },
+  {
+    slug: "carne-frutosmar",
+    name: "Carne & frutos do mar",
+    image: meat_seafood,
+  },
+  { slug: "lanches", name: "Lanches", image: snacks },
+  {
+    slug: "comidas-congeladas",
+    name: "Comidas congeladas",
+    image: frozen_foods,
+  },
+  { slug: "cuidados-bebe", name: "Cuidados de bebê", image: baby_care },
+  { slug: "laticinios-ovos", name: "Laticínios & Ovos", image: dairy_eggs },
 ];
 
 export const heroSectionData = {
@@ -67,16 +75,16 @@ export const deliveryPartnerLoginImage =
   "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=200";
 
 export const appPromoBannerData = {
-  title: "Get fresh groceries in minutes",
+  title: "Peça seu hamburguer em minutos",
   description:
-    "Download the Instacart app for exclusive deals, real-time tracking, and the freshest selection delivered right to your door.",
+    "Baixe o aplicativo da MucuriFoos para promoções exclusivas, rastreio do pedido em tempo real, e tenha o melhor da hamburgueria na porta da sua casa.",
 };
 
 export const footerData = {
   brand: {
-    name: "Instacart",
+    name: "MucuriFoods",
     description:
-      "Bringing fresh, organic groceries straight from local farms to your doorstep. Nourish your home with Earth's finest.",
+      "O melhor lanche da cidade entregue na porta da sua casa. Nutra sua casa com o melhor da hamburgueria nacional.",
     socials: [
       { icon: SiFacebook, link: "#" },
       { icon: SiX, link: "#" },
@@ -88,19 +96,19 @@ export const footerData = {
     {
       title: "Quick Links",
       links: [
-        { label: "All Products", to: "/products" },
-        { label: "Flash Deals", to: "/deals" },
-        { label: "Track Order", to: "/orders" },
-        { label: "Delivery Partner", to: "/delivery" },
+        { label: "Todos produtos", to: "/products" },
+        { label: "Ofertas", to: "/deals" },
+        { label: "Rastreie seu pedido", to: "/orders" },
+        { label: "Entregadores parceiros", to: "/delivery" },
       ],
     },
     {
       title: "Customer Service",
       links: [
-        { label: "My Account", to: "#" },
-        { label: "Order History", to: "#" },
-        { label: "Addresses", to: "#" },
-        { label: "Help Center", href: "#" },
+        { label: "Minha conta", to: "#" },
+        { label: "Historico de pedidos", to: "#" },
+        { label: "Endereços", to: "#" },
+        { label: "Central de ajuda", href: "#" },
       ],
     },
   ],
@@ -112,21 +120,21 @@ export const footerData = {
   ],
 
   bottom: {
-    copyright: "© 2026 Greatstack. All rights reserved.",
+    copyright: "© 2026 MucuriFoods. Todos os direitos reservados.",
     links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
+      { label: "Politica de privacidade", href: "#" },
+      { label: "Termos de serviço", href: "#" },
     ],
   },
 };
 
 export const statusColors: Record<string, string> = {
-  Placed: "bg-blue-100 text-blue-700",
-  Confirmed: "bg-indigo-100 text-indigo-700",
-  Packed: "bg-purple-100 text-purple-700",
+  Feito: "bg-blue-100 text-blue-700",
+  Confirmado: "bg-indigo-100 text-indigo-700",
+  Rota: "bg-purple-100 text-purple-700",
   "Out for Delivery": "bg-app-orange/10 text-app-orange",
-  Delivered: "bg-green-100 text-green-700",
-  Cancelled: "bg-red-100 text-red-700",
+  Entregue: "bg-green-100 text-green-700",
+  Cancelado: "bg-red-100 text-red-700",
 };
 
 export const iconsForLeafpad = {
@@ -137,13 +145,13 @@ export const iconsForLeafpad = {
 export const dummyProducts = [
   {
     _id: "69c22613ae75a98c7cd13b3b",
-    name: "Butter Croissant 100g",
-    description: "Flaky and buttery",
+    name: "Croissant 100g",
+    description: "Escamoso e amanteigado",
     price: 45,
     originalPrice: 50,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/zvoeqbvrbrt7atqj0dbu.png",
-    category: "bakery",
+    category: "confeitaria",
     unit: "100g",
     stock: 100,
     isOrganic: false,
@@ -157,13 +165,13 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b37",
-    name: "Organic Quinoa 500g",
-    description: "High protein, Gluten-free",
+    name: "Quinoa 500g",
+    description: "Rico em proteina, sem glúten",
     price: 420,
     originalPrice: 450,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/cxrrgnf12xuhkr4dyhi2.png",
-    category: "pantry-staples",
+    category: "produtos-despensa",
     unit: "500g",
     stock: 100,
     isOrganic: true,
@@ -177,13 +185,13 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b3a",
-    name: "Brown Bread 400g",
-    description: "Soft and healthy, Ideal for breakfast",
+    name: "Pão 400g",
+    description: "Saudável, perfeito para café da manhã",
     price: 35,
     originalPrice: 40,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/vy1xa7zovcu22smzapzv.png",
-    category: "bakery",
+    category: "confeitaria",
     unit: "400g",
     stock: 100,
     isOrganic: false,
@@ -198,12 +206,12 @@ export const dummyProducts = [
   {
     _id: "69c22613ae75a98c7cd13b36",
     name: "Barley 1kg",
-    description: "Rich in fiber, Helps digestion",
+    description: "Rico em fibras, ajuda na digestão",
     price: 140,
     originalPrice: 150,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/spb5sgy8g24rned9nwog.png",
-    category: "pantry-staples",
+    category: "produtos-despensa",
     unit: "1kg",
     stock: 100,
     isOrganic: false,
@@ -217,13 +225,13 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b39",
-    name: "Knorr Cup Soup 70g",
-    description: "Convenient and tasty",
+    name: "Sopa de Knorr 70g",
+    description: "Prático e saboroso",
     price: 30,
     originalPrice: 35,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/vnzb2qbwtpab5gnqvx0f.png",
-    category: "pantry-staples",
+    category: "produtos-despensa",
     unit: "70g",
     stock: 100,
     isOrganic: false,
@@ -237,13 +245,13 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b38",
-    name: "Maggi Noodles 280g",
-    description: "Instant and easy to cook",
+    name: "Noodles Maggi 280g",
+    description: "Instantâneo e fácil de cozinhar",
     price: 50,
     originalPrice: 55,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/dsep7owmwvfrukzbslqo.png",
-    category: "pantry-staples",
+    category: "produtos-despensa",
     unit: "280g",
     stock: 100,
     isOrganic: false,
@@ -258,12 +266,12 @@ export const dummyProducts = [
   {
     _id: "69c22613ae75a98c7cd13b30",
     name: "Sprite 1.5L",
-    description: "Chilled and refreshing, Perfect for celebrations",
+    description: "Refrescante, perfeito para comemorações",
     price: 60,
     originalPrice: 75,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/daiglpvgna1dlhjplbve.png",
-    category: "beverages",
+    category: "bebidas",
     unit: "1.5L",
     stock: 100,
     isOrganic: false,
@@ -277,14 +285,13 @@ export const dummyProducts = [
   },
   {
     _id: "69c22613ae75a98c7cd13b23",
-    name: "Carrot 500g",
-    description:
-      "Sweet and crunchy, Good for eyesight, Ideal for juices and salads",
+    name: "Cenoura 500g",
+    description: "doce e crocante, bom para a visão, ideal para sucos e salada",
     price: 44,
     originalPrice: 50,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/ceqgisupuizyste9aifg.png",
-    category: "fruits-vegetables",
+    category: "frutas-vegetais",
     unit: "500g",
     stock: 100,
     isOrganic: true,
@@ -299,12 +306,12 @@ export const dummyProducts = [
   {
     _id: "69c22613ae75a98c7cd13b2f",
     name: "Coca-Cola 1.5L",
-    description: "Perfect for parties and gatherings, Best served chilled",
+    description: "Perfeita para festas de aniversário, melhor servida gelada",
     price: 75,
     originalPrice: 80,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/eljxcdud6fduwfim5rdx.png",
-    category: "beverages",
+    category: "bebidas",
     unit: "1.5L",
     stock: 100,
     isOrganic: false,
@@ -324,7 +331,7 @@ export const dummyProducts = [
     originalPrice: 120,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/dboutcrkdjhoxcvbbqne.png",
-    category: "pantry-staples",
+    category: "produtos-despensa",
     unit: "1kg",
     stock: 100,
     isOrganic: false,
@@ -344,7 +351,7 @@ export const dummyProducts = [
     originalPrice: 90,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/cnjrpbcnqesqxy1wr30g.png",
-    category: "dairy-eggs",
+    category: "laticinios-ovos",
     unit: "12pcs",
     stock: 100,
     isOrganic: false,
@@ -365,7 +372,7 @@ export const dummyProducts = [
     originalPrice: 50,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/dsnmko6gqtyw31okby80.png",
-    category: "fruits-vegetables",
+    category: "frutas-vegetais",
     unit: "1kg",
     stock: 100,
     isOrganic: false,
@@ -385,7 +392,7 @@ export const dummyProducts = [
     originalPrice: 550,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/evuovl2nlwdjukosfz23.png",
-    category: "pantry-staples",
+    category: "produtos-despensa",
     unit: "5kg",
     stock: 100,
     isOrganic: false,
@@ -405,7 +412,7 @@ export const dummyProducts = [
     originalPrice: 50,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/wnvtwlm2tphqburhsmyc.png",
-    category: "fruits-vegetables",
+    category: "frutas-vegetais",
     unit: "500g",
     stock: 100,
     isOrganic: false,
@@ -425,7 +432,7 @@ export const dummyProducts = [
     originalPrice: 76,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/qt1ypzsoqni12ghf2ryp.png",
-    category: "beverages",
+    category: "bebidas",
     unit: "1.5L",
     stock: 100,
     isOrganic: false,
@@ -445,7 +452,7 @@ export const dummyProducts = [
     originalPrice: 18,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/bhrtl76sscvmeiq4kchm.png",
-    category: "fruits-vegetables",
+    category: "frutas-vegetais",
     unit: "500g",
     stock: 100,
     isOrganic: true,
@@ -466,7 +473,7 @@ export const dummyProducts = [
     originalPrice: 80,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/r1wxfortw5h12g7egx7k.png",
-    category: "fruits-vegetables",
+    category: "frutas-vegetais",
     unit: "1kg",
     stock: 100,
     isOrganic: false,
@@ -486,7 +493,7 @@ export const dummyProducts = [
     originalPrice: 250,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/ooitbkcjcky0gkjmkatb.png",
-    category: "pantry-staples",
+    category: "produtos-despensa",
     unit: "5kg",
     stock: 100,
     isOrganic: false,
@@ -507,7 +514,7 @@ export const dummyProducts = [
     originalPrice: 70,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/jsmb7caaokhnyci2coga.png",
-    category: "fruits-vegetables",
+    category: "frutas-vegetais",
     unit: "500g",
     stock: 100,
     isOrganic: false,
@@ -527,7 +534,7 @@ export const dummyProducts = [
     originalPrice: 70,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/nexecd3mgyzrpeun1bee.png",
-    category: "beverages",
+    category: "bebidas",
     unit: "1.5L",
     stock: 100,
     isOrganic: false,
@@ -548,7 +555,7 @@ export const dummyProducts = [
     originalPrice: 90,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/vihqr6wquv57byurvz46.png",
-    category: "dairy-eggs",
+    category: "laticinios-ovos",
     unit: "200g",
     stock: 100,
     isOrganic: false,
@@ -569,7 +576,7 @@ export const dummyProducts = [
     originalPrice: 150,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/nb1mpxuo4fdcik6ey5yj.png",
-    category: "fruits-vegetables",
+    category: "frutas-vegetais",
     unit: "1kg",
     stock: 100,
     isOrganic: false,
@@ -590,7 +597,7 @@ export const dummyProducts = [
     originalPrice: 30,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/kdbfytxisrjymgy0ubhk.png",
-    category: "fruits-vegetables",
+    category: "frutas-vegetais",
     unit: "1kg",
     stock: 100,
     isOrganic: true,
@@ -611,7 +618,7 @@ export const dummyProducts = [
     originalPrice: 40,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/tzibj2ntsnbn4e0u5kwv.png",
-    category: "fruits-vegetables",
+    category: "frutas-vegetais",
     unit: "500g",
     stock: 100,
     isOrganic: true,
@@ -632,7 +639,7 @@ export const dummyProducts = [
     originalPrice: 140,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/gek3mmiig3lixlkpxks8.png",
-    category: "dairy-eggs",
+    category: "laticinios-ovos",
     unit: "200g",
     stock: 100,
     isOrganic: false,
@@ -652,7 +659,7 @@ export const dummyProducts = [
     originalPrice: 60,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/ooamzy497lhsj2gjuwby.png",
-    category: "dairy-eggs",
+    category: "laticinios-ovos",
     unit: "1L",
     stock: 100,
     isOrganic: false,
@@ -672,7 +679,7 @@ export const dummyProducts = [
     originalPrice: 100,
     image:
       "https://raw.githubusercontent.com/avinashdm/gs-images/main/greencart/pjt1y6xdo46tluemhf0o.png",
-    category: "fruits-vegetables",
+    category: "frutas-vegetais",
     unit: "1kg",
     stock: 100,
     isOrganic: false,
