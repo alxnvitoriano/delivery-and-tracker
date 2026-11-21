@@ -27,7 +27,7 @@ const Hero = () => {
             {heroSectionData.description}
           </p>
 
-          <div className="">
+          <div className="flex flex-wrap gap-3">
             <Link
               to="/products"
               className="px-7 py-3 bg-orange-400 text-white font-semibold rounded-full hover:bg-orange-500 transition-all flex-center gap-2 active:scale-[0.98]"
