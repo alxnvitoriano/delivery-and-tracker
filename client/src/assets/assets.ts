@@ -29,18 +29,22 @@ export const assets = {
 export const categoriesData = [
   {
     slug: "fruits-vegetables",
-    name: "Fruits & Vegetables",
+    name: "Frutas & Vegetais",
     image: fruits_vegetables,
   },
-  { slug: "personal-care", name: "Personal Care", image: personal_care },
-  { slug: "pantry-staples", name: "Pantry Staples", image: pantry_staples },
-  { slug: "bakery", name: "Bakery", image: bakery },
-  { slug: "beverages", name: "Beverages", image: drinks },
-  { slug: "meat-seafood", name: "Meat & Seafood", image: meat_seafood },
-  { slug: "snacks", name: "Snacks", image: snacks },
-  { slug: "frozen-foods", name: "Frozen Foods", image: frozen_foods },
-  { slug: "baby-care", name: "Baby Care", image: baby_care },
-  { slug: "dairy-eggs", name: "Dairy & Eggs", image: dairy_eggs },
+  { slug: "personal-care", name: "Cuidados pessoais", image: personal_care },
+  {
+    slug: "pantry-staples",
+    name: "Produtos de despensa",
+    image: pantry_staples,
+  },
+  { slug: "bakery", name: "Confeitaria", image: bakery },
+  { slug: "beverages", name: "Bebidas", image: drinks },
+  { slug: "meat-seafood", name: "Carne & frutos do mar", image: meat_seafood },
+  { slug: "snacks", name: "Lanches", image: snacks },
+  { slug: "frozen-foods", name: "Comidas congeladas", image: frozen_foods },
+  { slug: "baby-care", name: "Cuidados de bebê", image: baby_care },
+  { slug: "dairy-eggs", name: "Laticínios & Ovos", image: dairy_eggs },
 ];
 
 export const heroSectionData = {
