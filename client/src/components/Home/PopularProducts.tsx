@@ -3,14 +3,14 @@ import type { Product } from "../../types";
 import { dummyProducts } from "../../assets/assets";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from "lucide-react";
-import ProductCard from "./ProductCard";
+import ProductCard from "../ProductCard";
 
 const PopularProducts = () => {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     setProducts(dummyProducts.slice(0, 10));
-  });
+  }, []);
   return (
     <section className="pb-16">
       <div className="max-w-7xl mx-auto">
