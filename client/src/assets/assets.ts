@@ -75,9 +75,9 @@ export const deliveryPartnerLoginImage =
   "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=200";
 
 export const appPromoBannerData = {
-  title: "Peça seu hamburguer em minutos",
+  title: "Faça seu pedido em minutos.",
   description:
-    "Baixe o aplicativo da MucuriFoos para promoções exclusivas, rastreio do pedido em tempo real, e tenha o melhor da hamburgueria na porta da sua casa.",
+    "Logo menos um aplicativo para promoções exclusivas, rastreio do pedido em tempo real, e tenha o melhor da hamburgueria na porta da sua casa. Estará disponivel em:",
 };
 
 export const footerData = {
