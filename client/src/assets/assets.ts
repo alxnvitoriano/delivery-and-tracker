@@ -114,9 +114,9 @@ export const footerData = {
   ],
 
   contact: [
-    { icon: MapPinIcon, text: "123 Green Valley Rd, Portland" },
-    { icon: PhoneIcon, text: "+1 (111) 123-4567" },
-    { icon: MailIcon, text: "hello@example.com" },
+    { icon: MapPinIcon, text: "Mucuri - Bahia, Brasil" },
+    { icon: PhoneIcon, text: "+55 (99) 99218-5615" },
+    { icon: MailIcon, text: "alxnvtn@gmail.com" },
   ],
 
   bottom: {
