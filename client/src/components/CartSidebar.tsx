@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import {
+  ArrowRightIcon,
   MinusIcon,
   PlusIcon,
   ShoppingBagIcon,
@@ -138,7 +139,7 @@ const CartSidebar = () => {
             </div>
 
             <div className="flex justify-between text-sm">
-              <span className="text-app-text-light">Enrega</span>
+              <span className="text-app-text-light">Entrega</span>
               <span className="font-medium">
                 {deliveryFree === 0 ? (
                   <span className="text-app-success">Grátis</span>
@@ -148,7 +149,29 @@ const CartSidebar = () => {
               </span>
             </div>
 
-            {deliveryFree > 0 && <p></p>}
+            {deliveryFree > 0 && (
+              <p className="text-xs text-app-text-light text-center">
+                Entrega grátis para pedidos acima de {currency}60!
+              </p>
+            )}
+
+            <div className="flex justify-between text-base font-semibold border-t border-app-border pt-3">
+              <span className="">Total</span>
+              <span>
+                {currency} {grandTotal.toFixed(2)}
+              </span>
+            </div>
+            <button
+              onClick={() => {
+                setIsCartOpen(false);
+                navigate("/checkout");
+                window.scrollTo(0, 0);
+              }}
+              className="w-full py-3 bg-app-orange text-white font-semibold rounded-xl 
+            hover:bg-app-orange-dark transition-colors flex-center gap-2 active:scale-[0.98]"
+            >
+              Ir para o pagamento <ArrowRightIcon className="size-4" />
+            </button>
           </div>
         )}
       </div>
