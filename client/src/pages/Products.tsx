@@ -5,6 +5,7 @@ import { categoriesData, dummyProducts } from "../assets/assets";
 import { ChevronDown, Home, SlidersHorizontal } from "lucide-react";
 import ProductCard from "../components/ProductCard";
 import Loading from "../components/Loading";
+import FilterPanel from "../components/FilterPanel";
 
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -68,7 +69,16 @@ const Products = () => {
           {/* SIDEBAR - DESKTOP */}
           <aside className="hidden lg:block w-64 shrink-0">
             <div className="bg-white rounded-2xl p-4 sticky top-24">
-              <p>Filtros</p>
+              <FilterPanel
+                categories={categoriesData}
+                category={category}
+                organic={organic}
+                minPrice={minPrice}
+                maxPrice={maxPrice}
+                updateFilter={updateFilter}
+                clearFilters={clearFilters}
+                hasFilters={hasFilters}
+              />
             </div>
           </aside>
 
@@ -165,6 +175,23 @@ const Products = () => {
           </main>
         </div>
       </div>
+
+      {/* MOBILE FILTERS MODAL */}
+      {mobileFiltersOpen && (
+        <>
+          <div
+            onClick={() => setMobileFiltersOpen(false)}
+            className="fixed inset-0 bg-black/40 z-50"
+          />
+
+          <div className="fixed bottom-0 left-0 right-0 bg-white z-50 rounded-t-2xl max-h-[80vh] overflow-y-auto animate-slide-in-up">
+            <div>
+              <h3>Filtros</h3>
+              <button></button>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
