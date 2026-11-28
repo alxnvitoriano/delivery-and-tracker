@@ -6,6 +6,7 @@ import { dummyProducts } from "../assets/assets";
 import Loading from "../components/Loading";
 import {
   ArrowLeftIcon,
+  ArrowRightIcon,
   HomeIcon,
   LeafIcon,
   MinusIcon,
@@ -13,6 +14,8 @@ import {
   ShoppingCartIcon,
   StarIcon,
 } from "lucide-react";
+import DummyReviewsSection from "../assets/DummyReviewsSection";
+import ProductCard from "../components/ProductCard";
 
 const ProductsPage = () => {
   const currency = import.meta.env.VITE_CURRENCY_SYMBOL || "R$";
@@ -111,7 +114,7 @@ const ProductsPage = () => {
                 )}
                 {product.discount > 0 && (
                   <span className="px-2.5 py-1 text-xs font-semibold bg-app-orange text-white rounded-full">
-                    {product.discount}%OFF Organicos
+                    {product.discount}% OFF
                   </span>
                 )}
               </div>
@@ -224,7 +227,36 @@ const ProductsPage = () => {
         </div>
         {/* COSTUMER REVIEW */}
 
+        {product.reviewCount > 0 && <DummyReviewsSection product={product} />}
+
         {/* RELATED PRODUCTS */}
+        {relatedProducts.length > 0 && (
+          <section className="mt-12 mb-44">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h2 className="text-2xl font-semibold text-app-green">
+                  Produtos relacionados
+                </h2>
+                <p className="text-sm text-app-text-light mt-1">
+                  Mais produtos de {categoryLabel}
+                </p>
+              </div>
+              <Link
+                className="text-sm font-semibold text-app-orange hover:text-app-orange-dark
+              flex items-center gap-1 transition-colors"
+                to={`/products?category=${product.category}`}
+              >
+                Ver mais <ArrowRightIcon className="size-4" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 xl:gap-8">
+              {relatedProducts.slice(0, 5).map((rp) => (
+                <ProductCard key={rp._id} product={rp} />
+              ))}
+            </div>
+          </section>
+        )}
       </div>
     </div>
   );
