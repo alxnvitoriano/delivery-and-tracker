@@ -57,7 +57,7 @@ export const categoriesData = [
 
 export const heroSectionData = {
   description:
-    "Fresh, organic groceries delivered from local farms to your doorstep. Quality you can taste, convenience you deserve.",
+    "Fresh, organic groceries Entregue from local farms to your doorstep. Quality you can taste, convenience you deserve.",
   hero_image: hero_bg,
   hero_features: [
     { icon: TruckIcon, title: "Envio Grátis", desc: "Pedidos acima de $60" },
@@ -132,7 +132,7 @@ export const statusColors: Record<string, string> = {
   Feito: "bg-blue-100 text-blue-700",
   Confirmado: "bg-indigo-100 text-indigo-700",
   Rota: "bg-purple-100 text-purple-700",
-  "Out for Delivery": "bg-app-orange/10 text-app-orange",
+  "Saiu para entrega": "bg-app-orange/10 text-app-orange",
   Entregue: "bg-green-100 text-green-700",
   Cancelado: "bg-red-100 text-red-700",
 };
@@ -748,7 +748,7 @@ export const dummyAdminDashboardData = {
       deliveryFee: 0,
       tax: 18.4,
       total: 248.4,
-      status: "Delivered",
+      status: "Entregue",
       statusHistory: [
         {
           status: "Placed",
@@ -769,14 +769,14 @@ export const dummyAdminDashboardData = {
           timestamp: "2026-04-06T07:54:27.171Z",
         },
         {
-          status: "Out for Delivery",
-          note: "Status updated to Out for Delivery",
+          status: "Saiu para entrega",
+          note: "Status updated to Saiu para entrega",
           _id: "69d366b57ed7e54198d67e00",
           timestamp: "2026-04-06T07:54:29.226Z",
         },
         {
-          status: "Delivered",
-          note: "Delivered by partner",
+          status: "Entregue",
+          note: "Entregue by partner",
           _id: "69d373207ed7e54198d681b1",
           timestamp: "2026-04-06T08:47:28.983Z",
         },
@@ -871,7 +871,7 @@ export const dummyDashboardOrdersData = [
     deliveryFee: 0,
     tax: 18.4,
     total: 248.4,
-    status: "Delivered",
+    status: "Entregue",
     statusHistory: [
       {
         status: "Placed",
@@ -892,14 +892,14 @@ export const dummyDashboardOrdersData = [
         timestamp: "2026-04-06T07:54:27.171Z",
       },
       {
-        status: "Out for Delivery",
-        note: "Status updated to Out for Delivery",
+        status: "Saiu para entrega",
+        note: "Status updated to Saiu para entrega",
         _id: "69d366b57ed7e54198d67e00",
         timestamp: "2026-04-06T07:54:29.226Z",
       },
       {
-        status: "Delivered",
-        note: "Delivered by partner",
+        status: "Entregue",
+        note: "Entregue by partner",
         _id: "69d373207ed7e54198d681b1",
         timestamp: "2026-04-06T08:47:28.983Z",
       },
@@ -964,7 +964,7 @@ export const dummyDashboardOrdersData = [
     deliveryFee: 0,
     tax: 18.4,
     total: 248.4,
-    status: "Out for Delivery",
+    status: "Saiu para entrega",
     statusHistory: [
       {
         status: "Placed",
@@ -985,8 +985,8 @@ export const dummyDashboardOrdersData = [
         timestamp: "2026-04-06T07:54:27.171Z",
       },
       {
-        status: "Out for Delivery",
-        note: "Status updated to Out for Delivery",
+        status: "Saiu para entrega",
+        note: "Status updated to Saiu para entrega",
         _id: "69d366b57ed7e54198d67e00",
         timestamp: "2026-04-06T07:54:29.226Z",
       },
